@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --darkcyan: hsl(185, 75%, 39%);
+  --very-dark-desaturated: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 18px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 0.1px);
+  background-color: var(--darkcyan);
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+.bg__top {
+  position: absolute;
+  top: -50%;
+  left: -20%;
+  z-index: -1;
+}
+
+.bg__bottom {
+  position: absolute;
+  right: -20%;
+  bottom: -50%;
+  z-index: -1;
+}
+
+.container {
+  background-color: white;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+.container article:first-child {
+  position: relative;
+}
+
+.container article:first-child img {
+  border-radius: 10px 10px 0 0;
+}
+
+.container article:first-child div img {
+  border-radius: 50%;
+  border: 5px solid white;
+  width: 5rem;
+  position: absolute;
+  left: 50%;
+  bottom: -2rem;
+  transform: translateX(-50%);
+}
+
+.container article:nth-child(2) {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.container article:nth-child(2) span,
+p {
+  color: var(--dark-grayish-blue);
+  font-weight: 400;
+}
+
+.container article:nth-child(2) p {
+  color: var(--dark-grayish-blue);
+  margin-top: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+.container article:nth-child(3) {
+  border-top: 1px solid var(--dark-gray);
+  padding: 1.5rem;
+}
+
+.container article:nth-child(3) ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container article:nth-child(3) ul li {
+  font-weight: 700;
+  color: var(--very-dark-desaturated);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.container article:nth-child(3) ul li span {
+  font-weight: 400;
+  display: block;
+  font-size: 0.6rem;
+  color: var(--dark-grayish-blue);
+  margin-top: 0.1rem;
+  letter-spacing: 0.1rem;
+}
